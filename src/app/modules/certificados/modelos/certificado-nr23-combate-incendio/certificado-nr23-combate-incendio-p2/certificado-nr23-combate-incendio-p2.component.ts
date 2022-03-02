@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-certificado-nr23-combate-incendio-p2',
+  templateUrl: './certificado-nr23-combate-incendio-p2.component.html',
+  styleUrls: ['./certificado-nr23-combate-incendio-p2.component.scss']
+})
+export class CertificadoNR23CombateIncendioP2Component implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

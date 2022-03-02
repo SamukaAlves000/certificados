@@ -1,0 +1,34 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+button{
+  margin: 20px 15px 0px 0px;
+}
+
+
+
+table {
+  width: 100%;
+}
+
+
+.edit {
+  margin-right: 10px;
+}
+
+.edit > i {
+  color: #212121;
+
+}
+.delete > i {
+  color: #212121;
+
+}
+

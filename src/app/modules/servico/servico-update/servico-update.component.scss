@@ -1,0 +1,21 @@
+.example-full-width {
+  width: 100%;
+}
+
+button{
+  margin: 20px 15px 0px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
+}

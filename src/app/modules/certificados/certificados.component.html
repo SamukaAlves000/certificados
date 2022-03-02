@@ -1,0 +1,47 @@
+<div style="padding: 10px">
+  <button (click)="navigateToCertificadoCreate()" mat-fab color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
+<!--  <app-servico-read-->
+<!--    [isMostrarColunaDescricao]="true"-->
+<!--    [isMostrarColunaValor]="true"-->
+<!--    [isMostrarColunaDuracao]="true"-->
+<!--    [isMostrarColunaAction]="true">-->
+<!--  </app-servico-read>-->
+</div>
+<div fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let modelo of isCertificados.modelos">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <mat-card-title>{{modelo.nome}}</mat-card-title>
+        <mat-card-subtitle>{{'Modelo ' + (modelo.id + 1)}}</mat-card-subtitle>
+        <mat-checkbox style="text-align: right"  [(ngModel)]="modelo.isSelecionado" (change)="atualizar()"></mat-checkbox>
+      </mat-card-header>
+      <mat-carousel timings="250ms ease-in" [autoplay]="true"
+                    interval="3000"
+                    color="accent"
+                    maxWidth="auto"
+                    proportion="40"
+                    slides="5"
+                    [loop]="true"
+                    [hideArrows]="false"
+                    [hideIndicators]="false"
+                    [useKeyboard]="true"
+                    [useMouseWheel]="false"
+                    orientation="ltr"
+                    title="{{modelo.nome}}"
+
+      >
+        <mat-carousel-slide
+          #matCarouselSlide
+          *ngFor="let slide of modelo.fotos; let i = index"
+          [image]="slide"
+          overlayColor="#00000040"
+          [hideOverlay]="false"
+        ></mat-carousel-slide>
+      </mat-carousel>
+    </mat-card>
+  </div>
+</div>
+
+

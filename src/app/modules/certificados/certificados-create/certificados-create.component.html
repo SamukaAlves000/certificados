@@ -1,0 +1,173 @@
+<div>
+  <mat-vertical-stepper linear #stepper>
+    <mat-step>
+      <ng-template matStepLabel>Início</ng-template>
+      <div>
+        <button matStepperNext mat-fab color="primary">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="certificadoForm">
+      <ng-template matStepLabel>Importar lista de alunos</ng-template>
+      <mat-tab-group>
+        <mat-tab label="Texto">
+          <mat-form-field style="height: 300px; width: 70%" title="Ex: João da Silva;089.847.115-08">
+            <textarea matInput placeholder="Ex. João da Silva;089.847.115-08"
+                      style="height: 300px; width: 100%" [(ngModel)]="textoImportacao"></textarea>
+          </mat-form-field>
+          <div>
+            <button mat-raised-button color="primary" (click)="importar()">Importar</button>
+          </div>
+        </mat-tab>
+        <!--        <mat-tab label="Manual">-->
+        <!--          <form [formGroup]="certificadoForm">-->
+        <!--            <mat-form-field class="example-full-width">-->
+        <!--              <mat-label>Nome</mat-label>-->
+        <!--              <input type="text" matInput placeholder="Ex. João da Silva" formControlName="nome"-->
+        <!--                     maxlength="100">-->
+        <!--              <mat-icon matSuffix>edit</mat-icon>-->
+        <!--              &lt;!&ndash;              <mat-error *ngIf="!certificadoForm.get('nome').valid">Campo obrigatório!</mat-error>&ndash;&gt;-->
+        <!--            </mat-form-field>-->
+        <!--            <mat-form-field class="example-full-width">-->
+        <!--              <mat-label>CPF</mat-label>-->
+        <!--              <input type="text" mask="000.000.000-00" matInput placeholder="Ex. 000.000.000-00" formControlName="cpf"-->
+        <!--                     maxlength="14">-->
+        <!--              <mat-icon matSuffix>edit</mat-icon>-->
+        <!--              &lt;!&ndash;              <mat-error *ngIf="!certificadoForm.get('cpf').valid">CPF inválido!</mat-error>&ndash;&gt;-->
+        <!--            </mat-form-field>-->
+        <!--            <div>-->
+        <!--              <button mat-raised-button color="primary" (click)="addAluno()">Adicionar</button>-->
+        <!--            </div>-->
+        <!--            <br>-->
+        <!--          </form>-->
+        <!--        </mat-tab>-->
+      </mat-tab-group>
+      <br>
+      <br>
+      <div>
+        <table mat-table [dataSource]="dataSource">
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> Nome</th>
+            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="cpf">
+            <th mat-header-cell *matHeaderCellDef> CPF</th>
+            <td mat-cell *matCellDef="let element"> {{element.cpf | mask: "000.000.000-00" }} </td>
+          </ng-container>
+
+
+          <!-- Action Column -->
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Ações</th>
+            <td mat-cell *matCellDef="let element">
+              <a routerLink="/servicos/update/{{element.id}}" class="edit">
+                <i class="material-icons">
+                  visibility
+                </i>
+              </a>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[10, 20, 30]"></mat-paginator>
+      </div>
+      <div>
+        <button matStepperPrevious mat-mini-fab color="primary">
+          <mat-icon>skip_previous</mat-icon>
+        </button>
+        <button matStepperNext mat-mini-fab color="primary" [disabled]="this.alunos.length <= 0">
+          <mat-icon>skip_next</mat-icon>
+        </button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="certificadoDetalhesForm">
+      <form [formGroup]="certificadoDetalhesForm">
+        <ng-template matStepLabel>Cidade/Data</ng-template>
+        <mat-form-field class="example-full-width">
+          <mat-label>Cidade/Estado</mat-label>
+          <input type="text" matInput placeholder="Ex. Goiânia-GO" formControlName="cidade" required maxlength="200">
+          <mat-icon matSuffix>edit</mat-icon>
+          <mat-error *ngIf="!certificadoDetalhesForm.get('cidade').valid">Campo obrigatório!</mat-error>
+        </mat-form-field>
+
+        <ng-template matStepLabel>Configurações</ng-template>
+        <mat-form-field class="example-full-width">
+          <mat-label>Razão Social</mat-label>
+          <input type="text" matInput placeholder="Ex. TrenySeg Documentações & Treinamentos" formControlName="razaoSocial" required maxlength="500">
+          <mat-icon matSuffix>edit</mat-icon>
+          <mat-error *ngIf="!certificadoDetalhesForm.get('razaoSocial').valid">Campo obrigatório!</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>CNPJ</mat-label>
+          <input type="text" matInput placeholder="Ex. 00.000.000/0000-00" formControlName="cnpj"
+                 maxlength="30">
+          <mat-icon matSuffix>edit</mat-icon>
+          <mat-error *ngIf="!certificadoDetalhesForm.get('cnpj').valid">Campo obrigatório!</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Carga Horária</mat-label>
+          <input type="text" matInput placeholder="Ex. 00.000.000/0000-00" formControlName="horas"
+                 maxlength="100">
+          <mat-icon matSuffix>edit</mat-icon>
+          <mat-error *ngIf="!certificadoDetalhesForm.get('horas').valid">Campo obrigatório!</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Data do Curso</mat-label>
+          <input type="text" matInput placeholder="oito (08)" formControlName="dataCurso"
+                 maxlength="100">
+          <mat-icon matSuffix>edit</mat-icon>
+          <mat-error *ngIf="!certificadoDetalhesForm.get('dataCurso').valid">Campo obrigatório!</mat-error>
+        </mat-form-field>
+
+        <div>
+          <button matStepperPrevious mat-mini-fab color="primary">
+            <mat-icon>skip_previous</mat-icon>
+          </button>
+          <button matStepperNext mat-mini-fab color="primary" [disabled]="!certificadoDetalhesForm.valid">
+            <mat-icon>skip_next</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Fim</ng-template>
+      <mat-card class="color-01">
+        <mat-card-header>
+          <mat-card-title>Dados do Serviço</mat-card-title>
+        </mat-card-header>
+        <div style="padding: 20px">
+          <h4>Cidade: <h5>{{certificadoDetalhesForm.value.cidade}}</h5></h4>
+          <h4>Data: <h5>{{certificadoDetalhesForm.value.dataCurso}}</h5></h4>
+          <h4>Horas: <h5>{{certificadoDetalhesForm.value.horas}}</h5></h4>
+          <h4>Razão Social: <h5>{{certificadoDetalhesForm.value.razaoSocial}}</h5></h4>
+          <h4>CNPJ: <h5>{{certificadoDetalhesForm.value.cnpj}}</h5></h4>
+          <h4>Quantidade de Alunos: <h5>{{this.alunos.length}}</h5></h4>
+        </div>
+        <mat-card-actions>
+          <button mat-icon-button color="primary">
+            <mat-icon>pending_actions</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      <div>
+        <button mat-fab color="warn">
+          <mat-icon>close</mat-icon>
+        </button>
+        <button mat-fab color="primary" title="Gerar PDF" (click)="navigateToCertificadoView()">
+          <mat-icon>play_for_work</mat-icon>
+        </button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>
+

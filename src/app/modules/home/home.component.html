@@ -1,0 +1,40 @@
+
+<mat-grid-list cols="3">
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%">
+        <div class="teste" style="height: 300px">
+          <div class="profile-card">
+            <div class="header">
+              <h1>Olá, Seja Bem Vindo!</h1>
+              <h2>Alan Fabrício dos Santos Rocha</h2>
+            </div>
+            <img src="assets/images/profile/Screenshot_2.png" alt="Samuel Alves">
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="content">
+          <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let card of cards">
+              <mat-card class="teste2" routerLinkActive="list-item-active" [routerLink]="card.router">
+                <mat-card-content>
+                  <button mat-fab [ngStyle]="{'backgroundColor': card.color}">
+                    <mat-card-actions>
+                      <mat-icon>{{card.icon}}</mat-icon>
+                      <h4><b>{{card.title}}</b></h4>
+                    </mat-card-actions>
+                  </button>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-grid-list>
+
+
+
+

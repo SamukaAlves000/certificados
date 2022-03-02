@@ -1,0 +1,526 @@
+<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
+<!--  <app-modelo1-->
+<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
+<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
+<!--    [horas]="detalhesCertificados.horas" [razaoSocial]="detalhesCertificados.razaoSocial"-->
+<!--    *ngIf="isCertificados.modelos[0].isSelecionado">-->
+<!--  </app-modelo1>-->
+<!--</div>-->
+
+<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
+<!--  <app-nr10-->
+<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
+<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
+<!--    [horas]="detalhesCertificados.horas" [razaoSocial]="detalhesCertificados.razaoSocial"-->
+<!--    *ngIf="isCertificados.modelos[2].isSelecionado">-->
+<!--  </app-nr10>-->
+<!--</div>-->
+
+<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
+<!--  <app-nr33-->
+<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
+<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
+<!--    [horas]="detalhesCertificados.horas" [razaoSocial]="detalhesCertificados.razaoSocial"-->
+<!--    *ngIf="isCertificados.modelos[4].isSelecionado">-->
+<!--  </app-nr33>-->
+<!--</div>-->
+<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
+<!--  <app-nr18-->
+<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
+<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
+<!--    [horas]="detalhesCertificados.horas" [razaoSocial]="detalhesCertificados.razaoSocial"-->
+<!--    *ngIf="isCertificados.modelos[3].isSelecionado">-->
+<!--  </app-nr18>-->
+<!--</div>-->
+<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
+<!--  <app-certificado-ferramens-rotativas-->
+<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
+<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
+<!--    [horas]="detalhesCertificados.horas"-->
+<!--    [razaoSocial]="detalhesCertificados.razaoSocial"-->
+<!--    *ngIf="isCertificados.modelos[1].isSelecionado">-->
+<!--  </app-certificado-ferramens-rotativas>-->
+<!--</div>-->
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-resgate-primeiros-socorros
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[0].isSelecionado">
+  </app-certificado-resgate-primeiros-socorros>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-direcao-defensiva
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[1].isSelecionado">
+  </app-certificado-direcao-defensiva>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr5-cipa
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[2].isSelecionado">
+  </app-certificado-nr5-cipa>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr6-epis
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[3].isSelecionado">
+  </app-certificado-nr6-epis>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr7-primeiros-socorros
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[4].isSelecionado">
+  </app-certificado-nr7-primeiros-socorros>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr10-sep
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[5].isSelecionado">
+  </app-certificado-nr10-sep>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-mov-arm-cargas
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[6].isSelecionado">
+  </app-certificado-nr11-mov-arm-cargas>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-amarracao-carga
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[7].isSelecionado">
+  </app-certificado-nr11-amarracao-carga>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-empilhadeira
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[8].isSelecionado">
+  </app-certificado-nr11-op-empilhadeira>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-escavadeira-hidraulica
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[9].isSelecionado">
+  </app-certificado-nr11-op-escavadeira-hidraulica>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-mini-pa-carregadeira
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[10].isSelecionado">
+  </app-certificado-nr11-op-mini-pa-carregadeira>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-munck
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[11].isSelecionado">
+  </app-certificado-nr11-op-munck>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-pa-carregadeira
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[12].isSelecionado">
+  </app-certificado-nr11-op-pa-carregadeira>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-prensa-enfardadeira
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[13].isSelecionado">
+  </app-certificado-nr11-op-prensa-enfardadeira>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-rolo-compactador
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[14].isSelecionado">
+  </app-certificado-nr11-op-rolo-compactador>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-transpaleteira
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[15].isSelecionado">
+  </app-certificado-nr11-op-transpaleteira>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-trator-agricola
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[16].isSelecionado">
+  </app-certificado-nr11-op-trator-agricola>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-op-trator-esteira
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[17].isSelecionado">
+  </app-certificado-nr11-op-trator-esteira>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr11-sinalizacao-amarracao-carga
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[18].isSelecionado">
+  </app-certificado-nr11-sinalizacao-amarracao-carga>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr12-ferramens-manuais
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[19].isSelecionado">
+  </app-certificado-nr12-ferramens-manuais>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr12-ferramens-rot-eletrop
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[20].isSelecionado">
+  </app-certificado-nr12-ferramens-rot-eletrop>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr12-nr31-op-moto-poda
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[21].isSelecionado">
+  </app-certificado-nr12-nr31-op-moto-poda>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr12-nr31-op-rocadeira-costas
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[22].isSelecionado">
+  </app-certificado-nr12-nr31-op-rocadeira-costas>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr12-prot-maq-equipamentos
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[23].isSelecionado">
+  </app-certificado-nr12-prot-maq-equipamentos>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr12-nr31-seg-op-maq-agricolas
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[24].isSelecionado">
+  </app-certificado-nr12-nr31-seg-op-maq-agricolas>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr17-ergonomia
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[25].isSelecionado">
+  </app-certificado-nr17-ergonomia>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr18-mont-andaimes
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[26].isSelecionado">
+  </app-certificado-nr18-mont-andaimes>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr18-op-pta
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[26].isSelecionado">
+  </app-certificado-nr18-op-pta>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-nr18
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[28].isSelecionado">
+  </app-nr18>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr23-combate-incendio
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[29].isSelecionado">
+  </app-certificado-nr23-combate-incendio>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr26-nr36-produtos-quimicos
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[30].isSelecionado">
+  </app-certificado-nr26-nr36-produtos-quimicos>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr31-manip-agrot-pulverizador-costal-gasolina
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[31].isSelecionado">
+  </app-certificado-nr31-manip-agrot-pulverizador-costal-gasolina>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-nr33
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[32].isSelecionado">
+  </app-nr33>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr34-esp-confinado-total
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[33].isSelecionado">
+  </app-certificado-nr34-esp-confinado-total>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr34-maq-rotativas
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[34].isSelecionado">
+  </app-certificado-nr34-maq-rotativas>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr34-trab-quente
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[35].isSelecionado">
+  </app-certificado-nr34-trab-quente>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr35-linha-vida
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[36].isSelecionado">
+  </app-certificado-nr35-linha-vida>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr35-taludes
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[37].isSelecionado">
+  </app-certificado-nr35-taludes>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr35-trab-altura
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[38].isSelecionado">
+  </app-certificado-nr35-trab-altura>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-cetificado-nr23-brigada-incendio-i
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[39].isSelecionado">
+  </app-cetificado-nr23-brigada-incendio-i>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr23-brigadade-incendio
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[40].isSelecionado">
+  </app-certificado-nr23-brigadade-incendio>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr33-supervisor-esp-confinado
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[41].isSelecionado">
+  </app-certificado-nr33-supervisor-esp-confinado>
+</div>
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-rac01-vale
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[42].isSelecionado">
+  </app-certificado-rac01-vale>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-rac02-vale
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[43].isSelecionado">
+  </app-certificado-rac02-vale>
+</div>
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr34-trab-quente-total
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[44].isSelecionado">
+  </app-certificado-nr34-trab-quente-total>
+</div>
+
+
+
+<div *ngFor="let item of detalhesCertificados.alunos">
+  <app-certificado-nr35-trabalho-altura-total
+    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
+    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
+    [horas]="detalhesCertificados.horas"
+    [razaoSocial]="detalhesCertificados.razaoSocial"
+    *ngIf="isCertificados.modelos[45].isSelecionado">
+  </app-certificado-nr35-trabalho-altura-total>
+</div>
+
+
+
+
