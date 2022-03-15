@@ -13,12 +13,12 @@ export class HomeComponent implements OnInit {
          icon: 'home',
          title: 'Inicío',
          router: '/',
-         color: '#3F51B5'
+         color: '#4CAF50'
        },
        {
          icon: 'dashboard',
          title: 'Modelos',
-         router: '/certificados',
+         router: 'modelos/view',
          color: '#4CAF50'
        }
      ];

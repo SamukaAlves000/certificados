@@ -259,12 +259,15 @@ export class CertificadosService {
   };
 
   public detalhesCertificados: DetalhesCertificado = {
-    alunos: [],
-    dataCurso: '',
-    cidade: '',
-    cnpj: '',
-    horas: '',
-    razaoSocial: ''
+    alunos: [{
+      nome: 'Samuel Alves dos Santos',
+      cpf: '059.947.931-08'
+    }],
+    dataCurso: '27/05/1997',
+    cidade: 'Campos Belos',
+    cnpj: '58.069.360/0010-10',
+    horas: 'oito (08)',
+    razaoSocial: 'STEFANINI CONSULTORIA E ASSESSORIA'
   };
 
   public subject = new Subject<DetalhesCertificado>();
