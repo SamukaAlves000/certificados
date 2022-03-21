@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Nr33P2Component } from './nr33-p2/nr33-p2.component';
 import { Nr33P1Component } from './nr33-p1/nr33-p1.component';
+import {AssinaturasModule} from '../assinaturas/assinaturas/assinaturas.module';
 
 
 
@@ -12,7 +13,8 @@ import { Nr33P1Component } from './nr33-p1/nr33-p1.component';
     Nr33P2Component
   ],
     imports: [
-        CommonModule
+        CommonModule,
+        AssinaturasModule
     ]
 })
 export class Nr33Module { }

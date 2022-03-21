@@ -35,6 +35,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {CertificadosViewComponent} from '../../modules/certificados/certificados-view/certificados-view.component';
 import {ModelosModule} from '../../modules/certificados/modelos/modelos.module';
+import {MatRadioModule} from '@angular/material/radio';
+import {LoginComponent} from '../../modules/login/login.component';
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 
@@ -49,36 +51,38 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CertificadosComponent,
     CertificadosCreateComponent,
     CertificadosViewComponent,
+    LoginComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SharedModule,
-    MatSidenavModule,
-    MatDividerModule,
-    FlexLayoutModule,
-    MatCardModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatButtonModule,
-    ServicoModule,
-    MatIconModule,
-    MatCarouselModule,
-    MatGridListModule,
-    MatListModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatCheckboxModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    NgxMaskModule.forRoot(),
-    MatDatepickerModule,
-    MatNativeDateModule,
-    ModelosModule,
-  ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        SharedModule,
+        MatSidenavModule,
+        MatDividerModule,
+        FlexLayoutModule,
+        MatCardModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatButtonModule,
+        ServicoModule,
+        MatIconModule,
+        MatCarouselModule,
+        MatGridListModule,
+        MatListModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatStepperModule,
+        ReactiveFormsModule,
+        NgxMaskModule.forRoot(),
+        MatDatepickerModule,
+        MatNativeDateModule,
+        ModelosModule,
+        MatRadioModule,
+    ],
   providers: [
     DashboardService,
     ServicoService

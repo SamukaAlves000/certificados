@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {DefaultComponent} from './layouts/default/default.component';
-import {DashboardComponent} from './modules/dashboard/dashboard.component';
-import {PostsComponent} from './modules/posts/posts.component';
 import {ServicoComponent} from './modules/servico/servico.component';
 import {ServicoCreateComponent} from './modules/servico/servico-create/servico-create.component';
 import {ServicoDeleteComponent} from './modules/servico/servico-delete/servico-delete.component';
 import {ServicoUpdateComponent} from './modules/servico/servico-update/servico-update.component';
-import {HomeComponent} from './modules/home/home.component';
 import {CertificadosComponent} from './modules/certificados/certificados.component';
 import {CertificadosCreateComponent} from './modules/certificados/certificados-create/certificados-create.component';
 import {CertificadosViewComponent} from './modules/certificados/certificados-view/certificados-view.component';
 import {AlunosComponent} from './modules/alunos/alunos.component';
+import {LoginComponent} from './modules/login/login.component';
+import {HomeComponent} from './modules/home/home.component';
 const routes: Routes = [
   {
     path: '',
     component: DefaultComponent,
     children: [
       {
-        path: 'modelos/view',
+        path: 'home/modelos/view',
         component: CertificadosComponent
       },
       {
@@ -50,7 +49,7 @@ const routes: Routes = [
         component: ServicoUpdateComponent
       },
       {
-        path: '',
+        path: 'home',
         component: HomeComponent
       }
     ]
@@ -58,6 +57,10 @@ const routes: Routes = [
   {
       path: 'certificados/view',
       component: CertificadosViewComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

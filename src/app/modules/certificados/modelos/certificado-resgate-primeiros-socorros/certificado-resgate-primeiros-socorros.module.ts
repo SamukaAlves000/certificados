@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CertificadoResgatePrimeirosSocorrosP1Component } from './certificado-resgate-primeiros-socorros-p1/certificado-resgate-primeiros-socorros-p1.component';
 import { CertificadoResgatePrimeirosSocorrosP2Component } from './certificado-resgate-primeiros-socorros-p2/certificado-resgate-primeiros-socorros-p2.component';
+import {AssinaturasModule} from '../assinaturas/assinaturas/assinaturas.module';
 
 
 
@@ -12,7 +13,8 @@ import { CertificadoResgatePrimeirosSocorrosP2Component } from './certificado-re
     CertificadoResgatePrimeirosSocorrosP2Component
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AssinaturasModule
   ]
 })
 export class CertificadoResgatePrimeirosSocorrosModule { }

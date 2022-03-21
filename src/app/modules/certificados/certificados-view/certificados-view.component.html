@@ -1,55 +1,13 @@
-<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
-<!--  <app-modelo1-->
-<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
-<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
-<!--    [horas]="detalhesCertificados.horas" [razaoSocial]="detalhesCertificados.razaoSocial"-->
-<!--    *ngIf="isCertificados.modelos[0].isSelecionado">-->
-<!--  </app-modelo1>-->
-<!--</div>-->
-
-<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
-<!--  <app-nr10-->
-<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
-<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
-<!--    [horas]="detalhesCertificados.horas" [razaoSocial]="detalhesCertificados.razaoSocial"-->
-<!--    *ngIf="isCertificados.modelos[2].isSelecionado">-->
-<!--  </app-nr10>-->
-<!--</div>-->
-
-<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
-<!--  <app-nr33-->
-<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
-<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
-<!--    [horas]="detalhesCertificados.horas" [razaoSocial]="detalhesCertificados.razaoSocial"-->
-<!--    *ngIf="isCertificados.modelos[4].isSelecionado">-->
-<!--  </app-nr33>-->
-<!--</div>-->
-<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
-<!--  <app-nr18-->
-<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
-<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
-<!--    [horas]="detalhesCertificados.horas" [razaoSocial]="detalhesCertificados.razaoSocial"-->
-<!--    *ngIf="isCertificados.modelos[3].isSelecionado">-->
-<!--  </app-nr18>-->
-<!--</div>-->
-<!--<div *ngFor="let item of detalhesCertificados.alunos">-->
-<!--  <app-certificado-ferramens-rotativas-->
-<!--    [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"-->
-<!--    [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"-->
-<!--    [horas]="detalhesCertificados.horas"-->
-<!--    [razaoSocial]="detalhesCertificados.razaoSocial"-->
-<!--    *ngIf="isCertificados.modelos[1].isSelecionado">-->
-<!--  </app-certificado-ferramens-rotativas>-->
-<!--</div>-->
-
-
 <div *ngFor="let item of detalhesCertificados.alunos">
   <app-certificado-resgate-primeiros-socorros
     [nome]="item.nome" [cpf]="item.cpf" [cidade]="detalhesCertificados.cidade"
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[0].isSelecionado">
+
   </app-certificado-resgate-primeiros-socorros>
 </div>
 
@@ -60,6 +18,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[1].isSelecionado">
   </app-certificado-direcao-defensiva>
 </div>
@@ -70,6 +30,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[2].isSelecionado">
   </app-certificado-nr5-cipa>
 </div>
@@ -81,6 +43,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[3].isSelecionado">
   </app-certificado-nr6-epis>
 </div>
@@ -92,6 +56,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[4].isSelecionado">
   </app-certificado-nr7-primeiros-socorros>
 </div>
@@ -102,6 +68,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[5].isSelecionado">
   </app-certificado-nr10-sep>
 </div>
@@ -112,6 +80,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[6].isSelecionado">
   </app-certificado-nr11-mov-arm-cargas>
 </div>
@@ -123,6 +93,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[7].isSelecionado">
   </app-certificado-nr11-amarracao-carga>
 </div>
@@ -133,6 +105,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[8].isSelecionado">
   </app-certificado-nr11-op-empilhadeira>
 </div>
@@ -144,6 +118,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[9].isSelecionado">
   </app-certificado-nr11-op-escavadeira-hidraulica>
 </div>
@@ -155,6 +131,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[10].isSelecionado">
   </app-certificado-nr11-op-mini-pa-carregadeira>
 </div>
@@ -166,6 +144,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[11].isSelecionado">
   </app-certificado-nr11-op-munck>
 </div>
@@ -177,6 +157,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[12].isSelecionado">
   </app-certificado-nr11-op-pa-carregadeira>
 </div>
@@ -187,6 +169,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[13].isSelecionado">
   </app-certificado-nr11-op-prensa-enfardadeira>
 </div>
@@ -197,6 +181,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[14].isSelecionado">
   </app-certificado-nr11-op-rolo-compactador>
 </div>
@@ -207,6 +193,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[15].isSelecionado">
   </app-certificado-nr11-op-transpaleteira>
 </div>
@@ -217,6 +205,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[16].isSelecionado">
   </app-certificado-nr11-op-trator-agricola>
 </div>
@@ -228,6 +218,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[17].isSelecionado">
   </app-certificado-nr11-op-trator-esteira>
 </div>
@@ -238,6 +230,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[18].isSelecionado">
   </app-certificado-nr11-sinalizacao-amarracao-carga>
 </div>
@@ -248,6 +242,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[19].isSelecionado">
   </app-certificado-nr12-ferramens-manuais>
 </div>
@@ -258,6 +254,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[20].isSelecionado">
   </app-certificado-nr12-ferramens-rot-eletrop>
 </div>
@@ -269,6 +267,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[21].isSelecionado">
   </app-certificado-nr12-nr31-op-moto-poda>
 </div>
@@ -279,6 +279,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[22].isSelecionado">
   </app-certificado-nr12-nr31-op-rocadeira-costas>
 </div>
@@ -289,6 +291,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[23].isSelecionado">
   </app-certificado-nr12-prot-maq-equipamentos>
 </div>
@@ -300,6 +304,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[24].isSelecionado">
   </app-certificado-nr12-nr31-seg-op-maq-agricolas>
 </div>
@@ -310,6 +316,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[25].isSelecionado">
   </app-certificado-nr17-ergonomia>
 </div>
@@ -320,6 +328,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[26].isSelecionado">
   </app-certificado-nr18-mont-andaimes>
 </div>
@@ -330,6 +340,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[27].isSelecionado">
   </app-certificado-nr18-op-pta>
 </div>
@@ -340,6 +352,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[28].isSelecionado">
   </app-nr18>
 </div>
@@ -350,6 +364,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[29].isSelecionado">
   </app-certificado-nr23-combate-incendio>
 </div>
@@ -360,6 +376,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[30].isSelecionado">
   </app-certificado-nr26-nr36-produtos-quimicos>
 </div>
@@ -370,6 +388,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[31].isSelecionado">
   </app-certificado-nr31-manip-agrot-pulverizador-costal-gasolina>
 </div>
@@ -381,6 +401,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[32].isSelecionado">
   </app-nr33>
 </div>
@@ -391,6 +413,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[33].isSelecionado">
   </app-certificado-nr34-esp-confinado-total>
 </div>
@@ -402,6 +426,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[34].isSelecionado">
   </app-certificado-nr34-maq-rotativas>
 </div>
@@ -413,6 +439,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[35].isSelecionado">
   </app-certificado-nr34-trab-quente>
 </div>
@@ -423,6 +451,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[36].isSelecionado">
   </app-certificado-nr35-linha-vida>
 </div>
@@ -434,6 +464,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[37].isSelecionado">
   </app-certificado-nr35-taludes>
 </div>
@@ -444,6 +476,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[38].isSelecionado">
   </app-certificado-nr35-trab-altura>
 </div>
@@ -454,6 +488,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[39].isSelecionado">
   </app-cetificado-nr23-brigada-incendio-i>
 </div>
@@ -464,6 +500,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[40].isSelecionado">
   </app-certificado-nr23-brigadade-incendio>
 </div>
@@ -474,6 +512,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[41].isSelecionado">
   </app-certificado-nr33-supervisor-esp-confinado>
 </div>
@@ -485,6 +525,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[42].isSelecionado">
   </app-certificado-rac01-vale>
 </div>
@@ -495,6 +537,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[43].isSelecionado">
   </app-certificado-rac02-vale>
 </div>
@@ -505,6 +549,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[44].isSelecionado">
   </app-certificado-nr34-trab-quente-total>
 </div>
@@ -517,6 +563,8 @@
     [dataCurso]="detalhesCertificados.dataCurso" [cnpj]="detalhesCertificados.cnpj"
     [horas]="detalhesCertificados.horas"
     [razaoSocial]="detalhesCertificados.razaoSocial"
+    [assinatura1]="detalhesCertificados.assiantura1"
+    [assinatura2]="detalhesCertificados.assiantura2"
     *ngIf="isCertificados.modelos[45].isSelecionado">
   </app-certificado-nr35-trabalho-altura-total>
 </div>

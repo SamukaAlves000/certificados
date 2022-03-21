@@ -15,7 +15,7 @@ export interface Aluno {
 @Component({
   selector: 'app-certificados-create',
   templateUrl: './certificados-create.component.html',
-  styleUrls: ['./certificados-create.component.scss']
+  styleUrls: ['./certificados-create.component.scss'],
 })
 export class CertificadosCreateComponent implements OnInit {
   certificadoForm: FormGroup;
@@ -25,7 +25,14 @@ export class CertificadosCreateComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   textoImportacao = '';
   alunos: Aluno[] = [];
+  assinatura: string;
+  alan: false;
+  higor: false;
+  melquezedeque: false;
 
+  assinatura1: string;
+  assinatura2: string;
+  seasons: string[] = ['Alan Fabrício dos Santos Rocha', 'Melquezedeque do Vale Nunes', 'Higor Candido Ribeiro'];
 
   constructor(private formBuilder: FormBuilder, private router: Router, private certificadoService: CertificadosService) {
   }
@@ -43,6 +50,9 @@ export class CertificadosCreateComponent implements OnInit {
       cnpj: ['', Validators.required],
       horas: ['', Validators.required],
       razaoSocial: ['', Validators.required],
+      alan: [false],
+      higor: [false],
+      melquezedeque: [false]
     });
   }
 
@@ -58,7 +68,9 @@ export class CertificadosCreateComponent implements OnInit {
         cidade: '',
         cnpj: '',
         horas: '',
-        razaoSocial: ''
+        razaoSocial: '',
+        assiantura1: this.assinatura1,
+        assiantura2: this.assinatura2
       }
     );
   }
@@ -77,7 +89,9 @@ export class CertificadosCreateComponent implements OnInit {
         cidade: '',
         cnpj: '',
         horas: '',
-        razaoSocial: ''
+        razaoSocial: '',
+        assiantura1: '',
+        assiantura2: ''
       }
     );
   }
@@ -90,11 +104,15 @@ export class CertificadosCreateComponent implements OnInit {
         cidade: this.certificadoDetalhesForm.value.cidade,
         cnpj: this.certificadoDetalhesForm.value.cnpj,
         horas: this.certificadoDetalhesForm.value.horas,
-        razaoSocial: this.certificadoDetalhesForm.value. razaoSocial
+        razaoSocial: this.certificadoDetalhesForm.value.razaoSocial,
+        assiantura1: this.assinatura1,
+        assiantura2: this.assinatura2
 
       }
     );
+    // window.open('home/modelos/view', '_blank');
     this.router.navigate(['/certificados/view']);
   }
 
 }
+

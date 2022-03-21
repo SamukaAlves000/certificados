@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
        {
          icon: 'home',
          title: 'Inicío',
-         router: '/',
+         router: '/home',
          color: '#4CAF50'
        },
        {

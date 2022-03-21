@@ -1,5 +1,6 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {CertificadosService, DetalhesCertificado, IsCertificado} from '../certificados.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -18,18 +19,24 @@ export class CertificadosViewComponent implements OnInit {
     cidade: '',
     cnpj: '',
     horas: '',
-    razaoSocial: ''
+    razaoSocial: '',
+    assiantura1: '',
+    assiantura2: ''
+
   };
 
   isCertificados: IsCertificado = {
     modelos: []
   };
 
-  constructor(private certificadoService: CertificadosService) {
+  constructor(private certificadoService: CertificadosService, private router: Router) {
   }
 
 
   ngOnInit(): void {
+    if (!(localStorage.getItem('user') === 'true')) {
+      this.router.navigate(['login']);
+    }
     this.certificadoService.currentDetalhesCertificados.subscribe(value => {
       this.detalhesCertificados = value;
     });

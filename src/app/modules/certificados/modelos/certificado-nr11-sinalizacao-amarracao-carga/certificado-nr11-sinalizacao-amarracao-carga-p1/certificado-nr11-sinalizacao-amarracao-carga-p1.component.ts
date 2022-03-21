@@ -14,6 +14,8 @@ export class CertificadoNR11SinalizacaoAmarracaoCargaP1Component implements OnIn
   @Input()cnpj: string;
   @Input() horas: string;
   @Input()razaoSocial: string;
+  @Input() assinatura1: string;
+  @Input() assinatura2: string;
 
   constructor() { }
 

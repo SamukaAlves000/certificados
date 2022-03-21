@@ -75,7 +75,7 @@
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-        <mat-paginator [pageSizeOptions]="[10, 20, 30]"></mat-paginator>
+<!--        <mat-paginator [pageSizeOptions]="[10, 20, 30]"></mat-paginator>-->
       </div>
       <div>
         <button matStepperPrevious mat-mini-fab color="primary">
@@ -88,7 +88,7 @@
     </mat-step>
     <mat-step [stepControl]="certificadoDetalhesForm">
       <form [formGroup]="certificadoDetalhesForm">
-        <ng-template matStepLabel>Cidade/Data</ng-template>
+        <ng-template matStepLabel>Configurações</ng-template>
         <mat-form-field class="example-full-width">
           <mat-label>Cidade/Estado</mat-label>
           <input type="text" matInput placeholder="Ex. Goiânia-GO" formControlName="cidade" required maxlength="200">
@@ -128,7 +128,6 @@
           <mat-icon matSuffix>edit</mat-icon>
           <mat-error *ngIf="!certificadoDetalhesForm.get('dataCurso').valid">Campo obrigatório!</mat-error>
         </mat-form-field>
-
         <div>
           <button matStepperPrevious mat-mini-fab color="primary">
             <mat-icon>skip_previous</mat-icon>
@@ -139,11 +138,53 @@
         </div>
       </form>
     </mat-step>
+    <mat-step [stepControl]="certificadoDetalhesForm">
+      <h4>1°- Assinatura</h4>
+      <ng-template matStepLabel>Assinaturas</ng-template>
+      <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="assinatura1">
+        <mat-radio-button class="example-radio-button" value = "1">
+          Alan Fabrício dos Santos Rocha
+        </mat-radio-button>
+        <mat-radio-button class="example-radio-button" value = "2">
+          Melquezedeque do Vale Nunes
+        </mat-radio-button>
+        <mat-radio-button class="example-radio-button" value = "3">
+          Higor Candido Ribeiro
+        </mat-radio-button>
+      </mat-radio-group>
+      <h4>2°- Assinatura</h4>
+      <ng-template matStepLabel>Assinaturas</ng-template>
+      <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="assinatura2">
+        <mat-radio-button class="example-radio-button" value = "1">
+          Alan Fabrício dos Santos Rocha
+        </mat-radio-button>
+        <mat-radio-button class="example-radio-button" value = "2">
+          Melquezedeque do Vale Nunes
+        </mat-radio-button>
+        <mat-radio-button class="example-radio-button" value = "3">
+          Higor Candido Ribeiro
+        </mat-radio-button>
+      </mat-radio-group>
+      <div>
+        <button matStepperPrevious mat-mini-fab color="primary">
+          <mat-icon>skip_previous</mat-icon>
+        </button>
+        <button matStepperNext mat-mini-fab color="primary" [disabled]="!certificadoDetalhesForm.valid">
+          <mat-icon>skip_next</mat-icon>
+        </button>
+      </div>
+    </mat-step>
     <mat-step>
       <ng-template matStepLabel>Fim</ng-template>
       <mat-card class="color-01">
         <mat-card-header>
-          <mat-card-title>Dados do Serviço</mat-card-title>
+          <mat-card-title>Dados Gerais</mat-card-title>
         </mat-card-header>
         <div style="padding: 20px">
           <h4>Cidade: <h5>{{certificadoDetalhesForm.value.cidade}}</h5></h4>

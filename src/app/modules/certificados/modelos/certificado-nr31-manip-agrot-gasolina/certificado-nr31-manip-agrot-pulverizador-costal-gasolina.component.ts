@@ -14,6 +14,8 @@ export class CertificadoNR31ManipAgrotPulverizadorCostalGasolinaComponent implem
   @Input()cnpj: string;
   @Input() horas: string;
   @Input()razaoSocial: string;
+  @Input() assinatura1: string;
+  @Input() assinatura2: string;
 
   constructor() { }
 

@@ -10,6 +10,8 @@ export class DetalhesCertificado {
   cnpj: string;
   horas: string;
   razaoSocial: string;
+  assiantura1: string;
+  assiantura2: string;
 }
 
 export class IsCertificado {
@@ -29,7 +31,7 @@ export class CertificadosService {
       id: 0,
       nome: 'Resgate Primeiros socorros',
       fotos: ['assets/images/certificados/modelos/Certificado de resgate Primeiros socorros001.png', 'assets/images/certificados/modelos/Certificado de resgate Primeiros socorros002.png'],
-      isSelecionado: false
+      isSelecionado: true
     }, {
       id: 1,
       nome: 'Direção Defensiva',
@@ -267,7 +269,9 @@ export class CertificadosService {
     cidade: 'Campos Belos',
     cnpj: '58.069.360/0010-10',
     horas: 'oito (08)',
-    razaoSocial: 'STEFANINI CONSULTORIA E ASSESSORIA'
+    razaoSocial: 'STEFANINI CONSULTORIA E ASSESSORIA',
+    assiantura1: '1',
+    assiantura2: '1'
   };
 
   public subject = new Subject<DetalhesCertificado>();

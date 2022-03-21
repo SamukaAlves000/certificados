@@ -15,6 +15,8 @@ export class CertificadoNR12NR31OpRocadeiraCostasP1Component implements OnInit {
   @Input()cnpj: string;
   @Input() horas: string;
   @Input()razaoSocial: string;
+  @Input() assinatura1: string;
+  @Input() assinatura2: string;
 
   constructor() { }
 

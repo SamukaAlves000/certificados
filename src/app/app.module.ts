@@ -15,10 +15,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCarouselModule} from '@ngmodule/material-carousel';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    AlunosComponent
+    AlunosComponent,
 
   ],
   imports: [

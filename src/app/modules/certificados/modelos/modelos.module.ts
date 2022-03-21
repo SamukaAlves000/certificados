@@ -134,6 +134,7 @@ import { CertificadoNR34TrabQuenteTOTALP2Component } from './certificado-nr34-tr
 import { CertificadoNR35TrabalhoAlturaTOTALComponent } from './certificado-nr35-trabalho-altura-total/certificado-nr35-trabalho-altura-total.component';
 import { CertificadoNR35TrabalhoAlturaTOTALP1Component } from './certificado-nr35-trabalho-altura-total/certificado-nr35-trabalho-altura-total-p1/certificado-nr35-trabalho-altura-total-p1.component';
 import { CertificadoNR35TrabalhoAlturaTOTALP2Component } from './certificado-nr35-trabalho-altura-total/certificado-nr35-trabalho-altura-total-p2/certificado-nr35-trabalho-altura-total-p2.component';
+import {AssinaturasModule} from './assinaturas/assinaturas/assinaturas.module';
 
 
 
@@ -192,18 +193,19 @@ import { CertificadoNR35TrabalhoAlturaTOTALP2Component } from './certificado-nr3
     CertificadoNR34TrabQuenteTOTALComponent,
     CertificadoNR35TrabalhoAlturaTOTALComponent
   ],
-  imports: [
-    CommonModule,
-    Modelo1Module,
-    Nr10Module,
-    Nr18Module,
-    Nr33Module,
-    CertificadoFerramensRotativasModule,
-    CertificadoResgatePrimeirosSocorrosModule,
-    CertificadoDirecaoDefensivaModule,
-    CertificadoNR5CIPAModule,
-    CertificadoNR6EPISModule,
-    CertificadoNR7PrimeirosSocorrosModule
-  ]
+    imports: [
+        CommonModule,
+        Modelo1Module,
+        Nr10Module,
+        Nr18Module,
+        Nr33Module,
+        CertificadoFerramensRotativasModule,
+        CertificadoResgatePrimeirosSocorrosModule,
+        CertificadoDirecaoDefensivaModule,
+        CertificadoNR5CIPAModule,
+        CertificadoNR6EPISModule,
+        CertificadoNR7PrimeirosSocorrosModule,
+        AssinaturasModule
+    ]
 })
 export class ModelosModule { }
