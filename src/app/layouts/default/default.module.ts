@@ -42,17 +42,17 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 
 @NgModule({
-  declarations: [
-    DefaultComponent,
-    DashboardComponent,
-    PostsComponent,
-    ServicoComponent,
-    HomeComponent,
-    CertificadosComponent,
-    CertificadosCreateComponent,
-    CertificadosViewComponent,
-    LoginComponent
-  ],
+    declarations: [
+        DefaultComponent,
+        DashboardComponent,
+        PostsComponent,
+        ServicoComponent,
+        HomeComponent,
+        CertificadosComponent,
+        CertificadosCreateComponent,
+        CertificadosViewComponent,
+        LoginComponent
+    ],
     imports: [
         CommonModule,
         RouterModule,
@@ -83,9 +83,12 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
         ModelosModule,
         MatRadioModule,
     ],
-  providers: [
-    DashboardService,
-    ServicoService
-  ]
+    exports: [
+        CertificadosViewComponent
+    ],
+    providers: [
+        DashboardService,
+        ServicoService
+    ]
 })
 export class DefaultModule { }

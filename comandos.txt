@@ -5,7 +5,7 @@ npm i highcharts --save
 npm i @angular/flex-layout @angular/cdk --save
 ng serve --host=0.0.0.0 --disable-host-check
 
-ng g c modules/certificados/login
+ng g c modules/certificados/modal
 
 
 ng g m modules/certificados/modelos/assinaturas/assinaturas

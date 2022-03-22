@@ -14,12 +14,14 @@ import {AlunosModule} from './modules/alunos/alunos.module';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCarouselModule} from '@ngmodule/material-carousel';
+import { ModalComponent } from './modules/certificados/modal/modal.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AlunosComponent,
+    ModalComponent,
 
   ],
   imports: [

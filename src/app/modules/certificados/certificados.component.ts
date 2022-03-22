@@ -2,6 +2,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
 import {Aluno} from './certificados-create/certificados-create.component';
 import {CertificadosService, IsCertificado} from './certificados.service';
+import {ModalComponent} from './modal/modal.component';
+import {MatDialog} from '@angular/material/dialog';
 
 
 export interface Modelo {
@@ -33,7 +35,15 @@ export class CertificadosComponent implements OnInit {
 
   modelos: Modelo[];
 
-  constructor(private router: Router, private certificadoService: CertificadosService) {
+  constructor(private router: Router, private certificadoService: CertificadosService, public dialog: MatDialog) {
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ModalComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 

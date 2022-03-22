@@ -69,10 +69,14 @@
 
   <app-assinaturas [nome]="nome" [assinatura1]="assinatura1" [assinatura2]="assinatura2"></app-assinaturas>
 
-  <p style="position:absolute;top:762px;left:454px;white-space:nowrap" class="linha">
-    ________________________________________</p>
-  <p style="position:absolute;top:782px;left:507px;white-space:nowrap" class="ft04">{{razaoSocial}}</p>
-  <p style="position:absolute;top:802px;left:540px;white-space:nowrap" class="ft04"> CNPJ: {{cnpj}}</p>
+
+  <div style="position:absolute;top:787px;left:488px;white-space:nowrap">
+    _____________________________________________________
+    <p style="text-align: center">
+      {{razaoSocial}}<br>
+      CNPJ: {{cnpj}} <br>
+    </p>
+  </div>
 
 </div>
 

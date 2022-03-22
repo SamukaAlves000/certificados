@@ -40,6 +40,13 @@
           [hideOverlay]="false"
         ></mat-carousel-slide>
       </mat-carousel>
+      <div style="text-align: center; padding-top: 10px" *ngIf="modelo.isSelecionado">
+        <div title="Preview">
+          <button mat-mini-fab color="primary" (click)="openDialog()">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </div>
+      </div>
     </mat-card>
   </div>
 </div>

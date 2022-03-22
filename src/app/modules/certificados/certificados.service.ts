@@ -194,7 +194,7 @@ export class CertificadosService {
       isSelecionado: false
     }, {
       id: 33,
-      nome: 'NR 34 - Esp. Confinado - TOTAL',
+      nome: 'NR 33 - Esp. Confinado - TOTAL',
       fotos: ['assets/images/certificados/modelos/Certificado NR 34 - Esp. Confinado - TOTAL001.png', 'assets/images/certificados/modelos/Certificado NR 34 - Esp. Confinado - TOTAL002.png'],
       isSelecionado: false
     }, {
