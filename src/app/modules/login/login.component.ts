@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   }
 
   logar(): void {
-    if (this.form.value.username === 'admin' && this.form.value.password === 'admin123') {
+    if ((this.form.value.username === 'admin' && this.form.value.password === 'admin123') || (this.form.value.username === 'marcelo' && this.form.value.password === 'lima123')) {
       localStorage.setItem('user', 'true');
       this.router.navigate(['home']);
       this.error = null;
