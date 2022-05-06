@@ -10,6 +10,7 @@ export interface Aluno {
   id?: number;
   nome: string;
   cpf: string;
+  funcao: string;
 }
 
 @Component({
@@ -21,7 +22,7 @@ export class CertificadosCreateComponent implements OnInit {
   certificadoForm: FormGroup;
   certificadoDetalhesForm: FormGroup;
   dataSource = new MatTableDataSource([]);
-  displayedColumns: string[] = ['nome', 'cpf', 'action'];
+  displayedColumns: string[] = ['nome', 'cpf', 'funcao'];
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   textoImportacao = '';
   alunos: Aluno[] = [];
@@ -29,6 +30,11 @@ export class CertificadosCreateComponent implements OnInit {
   alan: false;
   higor: false;
   melquezedeque: false;
+  titulo: string;
+  tema: string;
+  duracao: string;
+  dataLista: string;
+  isDuasAssiantura: boolean;
 
   assinatura1: string;
   assinatura2: string;
@@ -52,7 +58,11 @@ export class CertificadosCreateComponent implements OnInit {
       razaoSocial: ['', Validators.required],
       alan: [false],
       higor: [false],
-      melquezedeque: [false]
+      melquezedeque: [false],
+      titulo: [''],
+      tema: [''],
+      duracao: [''],
+      dataLista: ['']
     });
   }
 
@@ -70,7 +80,12 @@ export class CertificadosCreateComponent implements OnInit {
         horas: '',
         razaoSocial: '',
         assiantura1: this.assinatura1,
-        assiantura2: this.assinatura2
+        assiantura2: this.assinatura2,
+        titulo: '',
+        tema: '',
+        duracao: '',
+        dataLista: '',
+        isDuasAssiantura: this.isDuasAssiantura
       }
     );
   }
@@ -79,7 +94,7 @@ export class CertificadosCreateComponent implements OnInit {
     const linhas = this.textoImportacao.split('\n');
     linhas.forEach(value => {
       const info = value.split(';');
-      this.alunos.push({nome: info[0], cpf: info[1]});
+      this.alunos.push({nome: info[0], cpf: info[1], funcao: info[2]});
     });
     this.dataSource = new MatTableDataSource<Aluno>(this.alunos); // Set dataSource  like this
     this.certificadoService.changeDetalhesCertificado(
@@ -91,7 +106,12 @@ export class CertificadosCreateComponent implements OnInit {
         horas: '',
         razaoSocial: '',
         assiantura1: '',
-        assiantura2: ''
+        assiantura2: '',
+        titulo: '',
+        tema: '',
+        duracao: '',
+        dataLista: '',
+        isDuasAssiantura: this.isDuasAssiantura
       }
     );
   }
@@ -106,12 +126,20 @@ export class CertificadosCreateComponent implements OnInit {
         horas: this.certificadoDetalhesForm.value.horas,
         razaoSocial: this.certificadoDetalhesForm.value.razaoSocial,
         assiantura1: this.assinatura1,
-        assiantura2: this.assinatura2
-
+        assiantura2: this.assinatura2,
+        titulo: this.certificadoDetalhesForm.value.titulo,
+        tema: this.certificadoDetalhesForm.value.tema,
+        duracao: this.certificadoDetalhesForm.value.duracao,
+        dataLista: this.certificadoDetalhesForm.value.dataLista,
+        isDuasAssiantura: this.isDuasAssiantura
       }
     );
     // window.open('home/modelos/view', '_blank');
     this.router.navigate(['/certificados/view']);
+  }
+
+  setAll(completed: boolean): void {
+    this.isDuasAssiantura = completed;
   }
 
 }
