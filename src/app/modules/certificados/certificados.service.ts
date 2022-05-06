@@ -12,6 +12,11 @@ export class DetalhesCertificado {
   razaoSocial: string;
   assiantura1: string;
   assiantura2: string;
+  titulo: string;
+  dataLista: string;
+  tema: string;
+  duracao: string;
+  isDuasAssiantura: boolean;
 }
 
 export class IsCertificado {
@@ -31,7 +36,7 @@ export class CertificadosService {
       id: 0,
       nome: 'Resgate Primeiros socorros',
       fotos: ['assets/images/certificados/modelos/Certificado de resgate Primeiros socorros001.png', 'assets/images/certificados/modelos/Certificado de resgate Primeiros socorros002.png'],
-      isSelecionado: true
+      isSelecionado: false
     }, {
       id: 1,
       nome: 'Direção Defensiva',
@@ -262,16 +267,22 @@ export class CertificadosService {
 
   public detalhesCertificados: DetalhesCertificado = {
     alunos: [{
-      nome: 'Samuel Alves dos Santos',
-      cpf: '059.947.931-08'
+      nome: 'Alan Fabrício dos Santos Rocha',
+      cpf: '000.000.000-00',
+      funcao: 'SERV. GERAIS'
     }],
     dataCurso: '27/05/1997',
     cidade: 'Campos Belos',
-    cnpj: '58.069.360/0010-10',
+    cnpj: 'TrenySeg Treinamentos & Documentações',
     horas: 'oito (08)',
-    razaoSocial: 'STEFANINI CONSULTORIA E ASSESSORIA',
+    razaoSocial: 'TrenySeg Treinamentos & Documentações',
     assiantura1: '1',
-    assiantura2: '1'
+    assiantura2: '1',
+    titulo: 'Programa de Treinamento NR 23',
+    dataLista: '27 e 28/05/2020',
+    duracao: '16h',
+    tema: 'Brigada de Incêndio Industrial',
+    isDuasAssiantura: false
   };
 
   public subject = new Subject<DetalhesCertificado>();
